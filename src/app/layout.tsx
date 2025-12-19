@@ -33,6 +33,14 @@ export default function RootLayout({
                 {profile.name}
               </Link>
               <nav className="flex items-center gap-4 text-sm text-slate-200">
+                <a
+                  className="rounded-full border border-orange-400/70 px-3 py-1 text-xs font-semibold text-orange-100 transition hover:-translate-y-0.5 hover:border-orange-200 hover:bg-orange-500/10 hover:text-white"
+                  href={profile.links.resume}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Resume
+                </a>
                 <Link href="/projects" className="hover:text-white">
                   Projects
                 </Link>
