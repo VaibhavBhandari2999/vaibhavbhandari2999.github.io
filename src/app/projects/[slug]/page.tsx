@@ -2,6 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/content/projects";
 
+export function generateStaticParams() {
+  return projects.map((p) => ({ slug: p.slug }));
+}
+
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) return notFound();
