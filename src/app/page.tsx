@@ -1,14 +1,25 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { profile } from "@/content/profile";
 import { projects } from "@/content/projects";
 import { experience } from "@/content/experience";
 import { Section } from "@/components/Sections";
 import { ProjectCard } from "@/components/ProjectCard";
 import { TitleTicker } from "@/components/TitleTicker";
+import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 
 export default function HomePage() {
   const featured = projects;
+  const [openProject, setOpenProject] = useState<string | null>(null);
+  useEffect(() => {
+    document.body.style.overflow = openProject ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [openProject]);
   const hasPhoto = Boolean(profile.photo);
   const initials = profile.name
     .split(" ")
@@ -90,29 +101,13 @@ export default function HomePage() {
       >
         <div className="grid gap-6 md:grid-cols-2">
           {featured.map((p) => (
-            <ProjectCard key={p.slug} project={p} />
+            <ProjectCard key={p.slug} project={p} openSlug={openProject} setOpenSlug={setOpenProject} />
           ))}
         </div>
       </Section>
 
       <Section title="Experience">
-        <div className="space-y-5">
-          {experience.map((e) => (
-            <div key={e.company} className="rounded-xl border p-5">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <div className="font-semibold">
-                  {e.role} — {e.company}
-                </div>
-                <div className="text-sm text-gray-600">{e.period}</div>
-              </div>
-              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm">
-                {e.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <ExperienceTimeline items={experience} />
       </Section>
 
       <Section title="Skills">
