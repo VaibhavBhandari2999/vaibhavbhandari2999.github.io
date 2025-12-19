@@ -75,6 +75,7 @@ export const skills: SkillCategory[] = [
       { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
       { name: "Kubernetes", icon: "https://cdn.simpleicons.org/kubernetes/326CE5" },
       { name: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins/D24939" },
+      { name: "GitHub Actions", icon:"https://cdn.simpleicons.org/githubactions/2088FF"},
       { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
       { name: "Unix Systems", icon: "https://cdn.simpleicons.org/linux/FCC624" },
       { name: "SonarQube"},

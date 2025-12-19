@@ -40,7 +40,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
 
   return (
     <div
-      className="group cursor-pointer rounded-2xl border border-white/12 bg-neutral-950/80 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur transition hover:-translate-y-1 hover:border-orange-300/50"
+      className="group cursor-pointer rounded-2xl border border-white/12 bg-neutral-950/80 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur transition hover:-translate-y-1 hover:border-orange-300/50 hover:shadow-[0_20px_60px_rgba(249,115,22,0.18)]"
       onClick={toggle}
       aria-expanded={open}
     >
@@ -68,7 +68,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
 
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-200">
         <Link href={`/projects/${project.slug}`} className="hover:text-orange-200">
-          {/* Case study */}
+          Case study
         </Link>
         {project.links.repo ? (
           <a

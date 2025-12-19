@@ -7,12 +7,12 @@ type EducationItem = (typeof EducationData)[number];
 export function EducationTimeline({ items }: { items: EducationItem[] }) {
   return (
     <div className="relative">
-      <div className="absolute left-[14px] top-3 h-[calc(100%-1rem)] w-[2px] bg-gradient-to-b from-sky-300/60 via-white/10 to-transparent" />
+      <div className="absolute left-[14px] top-3 h-[calc(100%-1rem)] w-[2px] bg-gradient-to-b from-orange-400/60 via-white/10 to-sky-400/50" />
       <div className="space-y-6">
         {items.map((item, idx) => (
           <div key={`${item.school}-${idx}`} className="relative pl-12">
-            <div className="absolute left-[6px] top-4 h-4 w-4 rounded-full border border-sky-200/70 bg-neutral-900 shadow-[0_0_0_6px_rgba(56,189,248,0.12)]" />
-            <div className="rounded-2xl border border-white/10 bg-neutral-950/70 p-5 shadow-[0_15px_40px_rgba(0,0,0,0.35)] backdrop-blur">
+            <div className="absolute left-[6px] top-4 h-4 w-4 rounded-full border border-orange-200/70 bg-neutral-900 shadow-[0_0_0_6px_rgba(249,115,22,0.12)]" />
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/5 via-neutral-950/80 to-sky-500/5 p-5 shadow-[0_15px_40px_rgba(0,0,0,0.35)] backdrop-blur">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <div className="space-y-1">
                   <div className="text-lg font-semibold text-white">
