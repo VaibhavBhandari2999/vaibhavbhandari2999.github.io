@@ -19,7 +19,7 @@ export default function RootLayout({
         <GridTrail
           className="pointer-events-none fixed inset-0 z-0"
           background="rgba(0,0,0,0)"
-          color="#7c3aed"
+          color="#f97316"
           cellSize={26}
           fadeMs={700}
           maxAlpha={0.35}

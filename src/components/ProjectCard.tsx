@@ -40,14 +40,14 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
 
   return (
     <div
-      className="group cursor-pointer rounded-2xl border border-white/12 bg-neutral-950/80 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur transition hover:-translate-y-1 hover:border-violet-300/40"
+      className="group cursor-pointer rounded-2xl border border-white/12 bg-neutral-950/80 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur transition hover:-translate-y-1 hover:border-orange-300/50"
       onClick={toggle}
       aria-expanded={open}
     >
       <div className="flex items-start justify-between gap-4">
         <div className="space-y-2">
           <h3 className="text-lg font-semibold text-white">
-            <Link href={`/projects/${project.slug}`} className="hover:text-violet-200">
+            <Link href={`/projects/${project.slug}`} className="hover:text-orange-200">
               {project.title}
             </Link>
           </h3>
@@ -67,12 +67,12 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
       </div>
 
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-200">
-        <Link href={`/projects/${project.slug}`} className="hover:text-violet-200">
+        <Link href={`/projects/${project.slug}`} className="hover:text-orange-200">
           {/* Case study */}
         </Link>
         {project.links.repo ? (
           <a
-            className="inline-flex items-center gap-2 rounded-full border border-violet-300/70 px-3 py-1 text-xs font-semibold text-violet-100 transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-violet-500/10 hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full border border-orange-300/70 px-3 py-1 text-xs font-semibold text-orange-100 transition hover:-translate-y-0.5 hover:border-orange-200 hover:bg-orange-500/10 hover:text-white"
             href={project.links.repo}
             target="_blank"
             rel="noreferrer"
@@ -81,7 +81,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
           </a>
         ) : null}
         {project.links.demo ? (
-          <a className="hover:text-violet-200" href={project.links.demo} target="_blank" rel="noreferrer">
+          <a className="hover:text-orange-200" href={project.links.demo} target="_blank" rel="noreferrer">
             Demo
           </a>
         ) : null}
