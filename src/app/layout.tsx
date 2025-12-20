@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import type { Metadata } from "next";
 import GridTrail from "@/components/GridTrail";
 import { profile } from "@/content/profile";
 import { ThemeToggle } from "@/components/ThemeToggle";
