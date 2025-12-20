@@ -25,13 +25,15 @@ export function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
                     <div className="text-lg font-semibold text-white">
                       {item.role} — {item.company}
                     </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm text-slate-200/90 font-medium">{item.period}</div>
                     {item.location ? (
-                      <div className="text-xs uppercase tracking-wide text-orange-100/80">
+                      <div className="text-xs tracking-wide text-orange-100/80">
                         {item.location}
                       </div>
                     ) : null}
                   </div>
-                  <div className="text-sm text-slate-200/90 font-medium">{item.period}</div>
                 </div>
                 <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-slate-200/90">
                   {bullets.map((b, i) => (

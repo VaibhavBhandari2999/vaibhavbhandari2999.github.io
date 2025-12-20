@@ -72,7 +72,20 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
             target="_blank"
             rel="noreferrer"
           >
-            Repo
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-3.5 w-3.5"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.55-3.88-1.55-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.76 2.67 1.25 3.32.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.18-1.49 3.14-1.18 3.14-1.18.63 1.59.24 2.76.12 3.05.73.8 1.17 1.83 1.17 3.08 0 4.41-2.68 5.38-5.24 5.67.41.35.78 1.04.78 2.1 0 1.52-.01 2.74-.01 3.12 0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                clipRule="evenodd"
+              />
+            </svg>
+            Code
           </a>
         ) : null}
         {project.links.demo ? (
@@ -132,7 +145,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Repo
+                        Code
                       </a>
                     ) : null}
                     {project.links.demo ? (

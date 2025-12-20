@@ -30,7 +30,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="mt-4 flex gap-4 text-sm">
           {project.links.repo ? (
             <a className="hover:underline" href={project.links.repo} target="_blank" rel="noreferrer">
-              Repo
+              Code
             </a>
           ) : null}
           {project.links.demo ? (

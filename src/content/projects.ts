@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "Designed a scalable pipeline using hybrid search, enriched with LLM-generated summaries, boosting Top-1 localization by 68%.",
       "Devised a multi-patch generation and ranking strategy, achieving a patch success rate within 5% of SOTA SLM systems."
     ],
-    stack: ["Python", "PyTorch", "Transformers", "vLLM", "Qwen2.5-7B", "DeepSeekCoder-V2-Instruct", "BM25", "Multiprocessing", "Git"],
+    stack: ["Python", "PyTorch", "Transformers", "vLLM", "BM25", "SWEBench", "Hybrid Search", "Hugging Face", "AST / Static Analysis", "Multiprocessing"],
     links: { repo: "https://github.com/VaibhavBhandari2999/SLM-Debugger" },
   },
 
@@ -33,21 +33,21 @@ export const projects: Project[] = [
         "Achieved a 70% reduction in response time by implementing distributed caching for chat history and chat session data.",
         "Integrated WebSocket communication for persistent chat sessions, and RESTful API for asynchronous chat history updates."
     ],
-    stack: ["Python", "GenAI", "RAG", "FAISS", "AWS", "Flask", "Redis", "DynamoDB"],
+    stack: ["Python", "Flask", "WebSockets", "REST APIs", "RAG", "FAISS", "Redis", "DynamoDB", "LLMs"],
     links: { repo: "https://github.com/VaibhavBhandari2999/KnowledgeBot" },
   },
 
   {
     slug: "academically",
     title: "AcademicAlly: Learning Enhancement Hub",
-    summary: "AcademicAlly is a comprehensive web-based solution aimed at providing insightful feedback to students to improve their academic performances and aid faculties by giving them valuable inferences and pointers to review their teaching methods.",
+    summary: "A web-based solution aimed at providing feedback to students and aid faculties by giving them valuable inferences and pointers to review their teaching methods.",
     descriptionLong: "It offers a customized user experience for students, enabling them to submit assignments, showing them an interactive dashboard containing their performance and percentile in each subtopic of a subject and allowing them to provide feedback to teachers. The application also reflects the academic standing of the student relative to their peers and provides additional resources to the student on topics requiring improvement. The solution also helps teachers grade assignments, send feedback to students and showing them an interactive dashboard containing grade details, class averages and in depth statistics of all students. It also contains an autograder system which grades Multiple Choice Questions instantaneously and provides a plagiarism checker to protect against students copying subjective answers from each other.",
     bullets: [
           "Built a full-stack academic platform with personalized feedback, real-time analytics, performance insights for students and faculty.",
           "Integrated an auto-grader and plagiarism checker to streamline assignment workflows and support scalable assessment.",
           "Enhanced visualization of topic-wise marks distribution and student performance trends using ChartJS."
     ],
-    stack: ["ReactJS", "MySQL", "Flask", "Google Cloud Platform", "HTML", "CSS"],
+    stack: ["React", "Flask", "MySQL", "Google Cloud Platform", "Chart.js", "REST APIs"],
     links: { repo: "https://github.com/VaibhavBhandari2999/AcademicAlly" },
   },
 
@@ -60,7 +60,7 @@ export const projects: Project[] = [
           "Built a keystroke-dynamics authentication system that verifies users based on how they type, analyzing timing patterns like key-hold duration and transition speed, achieving 91% identity prediction accuracy.",
           "Designed a full-stack Flask + JavaScript application for real-time capture and classification of typing behavior, enabling seamless behavioral biometrics–based login."
     ],
-    stack: ["Python", "Flask", "JavaScript", "SVM (scikit-learn)", "MongoDB", "HTML/CSS"],
+    stack: ["Python", "Flask", "JavaScript", "scikit-learn", "SVM", "MongoDB", "Behavioral Biometrics"],
     links: { repo: "https://github.com/VaibhavBhandari2999/Banking-System-with-Keystroke-Authentication" },
   },
 
@@ -75,7 +75,7 @@ export const projects: Project[] = [
       "Built React front end with Vite for a conversational interface that displays product fields, images, and contextual answers.",
       "Developed data scraping pipelines with Selenium to ingest product and blog data into the RDS and vector index.",
     ],
-    stack: ["Python", "FastAPI", "PostgreSQL (RDS)", "Pinecone", "React", "Vite", "Selenium", "LLMs"],
+    stack: ["Python", "FastAPI", "LLMs", "PostgreSQL (AWS RDS)", "AWS S3", "Pinecone", "Hybrid Retrieval", "Intent Classification", "Selenium", "React", "Vite"],
     links: { repo: "https://github.com/VaibhavBhandari2999/PartSelect_RAG" },
   },
 
@@ -90,7 +90,7 @@ export const projects: Project[] = [
       "Integrated with PostgreSQL (RDS) and formalized execution logs for auditability and traceability.",
       "Developed API endpoints to serve LLM-driven query results as structured JSON for downstream consumption.",
     ],
-    stack: ["Python", "FastAPI", "PostgreSQL (RDS)", "MCP", "LLMs", "Git"],
+    stack: ["Python", "MCP", "fastmcp", "MySQL", "PostgreSQL", "SQL Guardrails", "OpenAI-compatible API"],
     links: { repo: "https://github.com/VaibhavBhandari2999/mcp-sql-executor" },
   }
 
