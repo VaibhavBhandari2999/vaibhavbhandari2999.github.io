@@ -2,10 +2,16 @@ import "./globals.css";
 import Link from "next/link";
 import GridTrail from "@/components/GridTrail";
 import { profile } from "@/content/profile";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Vaibhav Bhandari | Portfolio",
   description: "Portfolio website",
+  icons: {
+    icon: ["/favicon.ico", "/icon0.svg", "/icon1.png"],
+    apple: "/apple-icon.png",
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -15,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative min-h-screen overflow-x-hidden bg-neutral-950 text-slate-100">
+      <body className="relative min-h-screen overflow-x-hidden bg-[var(--bg)] text-[var(--text)]">
         <GridTrail
           className="pointer-events-none fixed inset-0 z-0"
           background="rgba(0,0,0,0)"
@@ -27,14 +33,20 @@ export default function RootLayout({
         />
 
         <div className="relative z-10">
-          <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
+          <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[color-mix(in_srgb,var(--surface) 90%,transparent)] backdrop-blur">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-              <Link href="/" className="font-semibold text-slate-100">
+              <Link href="/" className="font-semibold text-[var(--text)]">
                 {profile.name}
               </Link>
-              <nav className="flex items-center gap-4 text-sm text-slate-200">
+              <nav className="flex items-center gap-3 text-sm text-[var(--text)]">
                 <a
-                  className="rounded-full border border-orange-400/70 px-3 py-1 text-xs font-semibold text-orange-100 transition hover:-translate-y-0.5 hover:border-orange-200 hover:bg-orange-500/10 hover:text-white"
+                  className="rounded-full border px-3 py-1 text-xs font-semibold transition hover:-translate-y-0.5"
+                  style={{
+                    color: "var(--accent)",
+                    borderColor: "var(--accent)",
+                    background:
+                      "color-mix(in srgb, var(--accent) 12%, transparent)",
+                  }}
                   href={profile.links.resume}
                   target="_blank"
                   rel="noreferrer"
@@ -53,6 +65,7 @@ export default function RootLayout({
                 <a className="hover:text-white" href={profile.links.email}>
                   Email
                 </a>
+                <ThemeToggle />
               </nav>
             </div>
           </header>

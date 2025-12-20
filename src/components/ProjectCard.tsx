@@ -68,7 +68,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
 
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-200">
         <Link href={`/projects/${project.slug}`} className="hover:text-orange-200">
-          Case study
+          {/* Case study */}
         </Link>
         {project.links.repo ? (
           <a

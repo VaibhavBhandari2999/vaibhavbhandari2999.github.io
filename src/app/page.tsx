@@ -57,6 +57,7 @@ export default function HomePage() {
 
             <p className="max-w-2xl text-lg text-slate-300">
               {profile.tagline}
+              <span className="mt-3 block font-semibold text-slate-100">Looking for my next role!</span>
             </p>
 
             <div className="flex flex-wrap gap-3">
