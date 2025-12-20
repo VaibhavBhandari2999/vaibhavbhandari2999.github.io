@@ -8,7 +8,7 @@ export function SkillsGrid() {
       {skillsData.map((group) => (
         <div
           key={group.name}
-          className="rounded-2xl border border-orange-300/20 bg-[var(--card-surface)] p-5 text-slate-100 shadow-[0_15px_40px_rgba(0,0,0,0.4)]"
+          className="rounded-2xl border border-[var(--border-strong)] bg-[var(--card-surface)] p-5 text-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.45)]"
         >
           <div className="text-sm font-semibold uppercase tracking-wide text-orange-200">{group.name}</div>
           <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">

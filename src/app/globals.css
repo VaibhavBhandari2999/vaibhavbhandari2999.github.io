@@ -7,10 +7,11 @@
   --surface: #0f1116;
   --surface-strong: #111827;
   --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.2);
   --accent: #f97316;
   --accent-2: #38bdf8;
-  --card-surface: #090909;
-  --card-tile: #0c0c0c;
+  --card-surface: #161616;
+  --card-tile: #1e1e1e;
 }
 
 [data-theme="light"] {
@@ -20,6 +21,7 @@
   --surface: #ffffff;
   --surface-strong: #e2e8f0;
   --border: #e2e8f0;
+  --border-strong: #d0d7e2;
   --accent: #f97316;
   --accent-2: #0ea5e9;
   --card-surface: #404040;
@@ -34,6 +36,7 @@
     --surface: #ffffff;
     --surface-strong: #e2e8f0;
     --border: #e2e8f0;
+    --border-strong: #d0d7e2;
     --accent: #f97316;
     --accent-2: #0ea5e9;
     --card-surface: #404040;

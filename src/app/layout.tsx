@@ -5,6 +5,7 @@ import Script from "next/script";
 import GridTrail from "@/components/GridTrail";
 import { profile } from "@/content/profile";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { NavBar } from "@/components/NavBar";
 
 export const metadata: Metadata = {
   title: "Vaibhav Bhandari | Portfolio",
@@ -22,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body className="relative min-h-screen overflow-x-hidden bg-[var(--bg)] text-[var(--text)]">
         <Script
           src="https://static.cloudflareinsights.com/beacon.min.js"
@@ -41,41 +42,8 @@ export default function RootLayout({
         />
 
         <div className="relative z-10">
-          <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[color-mix(in_srgb,var(--surface) 90%,transparent)] backdrop-blur">
-            <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-              <Link href="/" className="font-semibold text-[var(--text)]">
-                {profile.name}
-              </Link>
-              <nav className="flex items-center gap-3 text-sm text-[var(--text)]">
-                <a
-                  className="rounded-full border px-3 py-1 text-xs font-semibold transition hover:-translate-y-0.5"
-                  style={{
-                    color: "var(--accent)",
-                    borderColor: "var(--accent)",
-                    background:
-                      "color-mix(in srgb, var(--accent) 12%, transparent)",
-                  }}
-                  href={profile.links.resume}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Resume
-                </a>
-                <Link href="/projects" className="hover:text-white">
-                  Projects
-                </Link>
-                <a className="hover:text-white" href={profile.links.github} target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-                <a className="hover:text-white" href={profile.links.linkedin} target="_blank" rel="noreferrer">
-                  LinkedIn
-                </a>
-                <a className="hover:text-white" href={profile.links.email}>
-                  Email
-                </a>
-                <ThemeToggle />
-              </nav>
-            </div>
+          <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[linear-gradient(90deg,rgba(249,115,22,0.18),rgba(14,165,233,0.18))] backdrop-blur">
+            <NavBar />
           </header>
 
           <main className="mx-auto max-w-5xl px-4 py-10">{children}</main>

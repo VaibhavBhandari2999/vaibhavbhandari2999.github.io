@@ -40,7 +40,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
 
   return (
     <div
-      className="group cursor-pointer rounded-2xl border border-white/12 bg-neutral-950/80 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur transition hover:-translate-y-1 hover:border-orange-300/50 hover:shadow-[0_20px_60px_rgba(249,115,22,0.18)]"
+      className="group cursor-pointer rounded-2xl border border-[var(--border-strong)] bg-[var(--card-surface)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur transition hover:-translate-y-1 hover:border-orange-300/60 hover:shadow-[0_20px_60px_rgba(249,115,22,0.22)]"
       onClick={toggle}
       aria-expanded={open}
     >

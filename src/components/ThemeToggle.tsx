@@ -6,7 +6,7 @@ const themes = ["dark", "light"] as const;
 type Theme = (typeof themes)[number];
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     const stored = (localStorage.getItem("theme") as Theme | null) ?? null;
@@ -15,8 +15,7 @@ export function ThemeToggle() {
       document.documentElement.setAttribute("data-theme", stored);
       return;
     }
-    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-    const initial = prefersLight ? "light" : "dark";
+    const initial: Theme = "light";
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
   }, []);

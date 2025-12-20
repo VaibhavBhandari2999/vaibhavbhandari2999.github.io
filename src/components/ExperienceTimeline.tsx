@@ -19,7 +19,7 @@ export function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
           return (
             <div key={`${item.company}-${idx}`} className="relative pl-12">
               <div className="absolute left-[6px] top-4 h-4 w-4 rounded-full border border-orange-200/80 bg-[var(--card-surface)] shadow-[0_0_0_6px_rgba(249,115,22,0.15)]" />
-              <div className="rounded-2xl border border-orange-300/20 bg-[var(--card-surface)] p-5 text-slate-100 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+              <div className="rounded-2xl border border-[var(--border-strong)] bg-[var(--card-surface)] p-5 text-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div className="space-y-1">
                     <div className="text-lg font-semibold text-white">
