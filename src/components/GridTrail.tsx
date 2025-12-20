@@ -84,33 +84,29 @@ export default function GridTrail({
     const draw = () => {
       const now = performance.now();
 
-      // background fill
+      //background
       ctx.clearRect(0, 0, width, height);
       if (background !== "transparent") {
         ctx.fillStyle = background;
         ctx.fillRect(0, 0, width, height);
       }
 
-      // draw cells
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
           const t = lastHit[index(c, r)];
           const age = now - t;
 
-          // Base grid cell outline
+          //Base grid cell outline
           const x = c * cellSize;
           const y = r * cellSize;
 
-          // Glow fill + outline only if recently activated
           if (t > 0 && age >= 0 && age <= fadeMs) {
             const p = 1 - age / fadeMs; // 1 -> 0
             const a = Math.max(0, Math.min(maxAlpha, maxAlpha * p));
 
-            // Filled cell
             ctx.fillStyle = hexToRgba(color, a);
             ctx.fillRect(x + 1, y + 1, cellSize - 2, cellSize - 2);
 
-            // Slight stronger border on active
             ctx.strokeStyle = hexToRgba(color, Math.min(0.4, a + 0.1));
             ctx.lineWidth = 1;
             ctx.strokeRect(x + 0.5, y + 0.5, cellSize - 1, cellSize - 1);
@@ -127,7 +123,7 @@ export default function GridTrail({
     };
 
     const onLeave = () => {
-      // No-op; trail fades naturally
+      //trail fades naturally
     };
 
     resize();

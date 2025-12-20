@@ -102,7 +102,7 @@ export default function HomePage() {
 
       <Section
         title="Featured Projects"
-        className="rounded-2xl border border-white/10 bg-neutral-950/70 px-6 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur"
+        className="px-1"
       >
         <div className="grid gap-6 md:grid-cols-2">
           {featured.map((p) => (

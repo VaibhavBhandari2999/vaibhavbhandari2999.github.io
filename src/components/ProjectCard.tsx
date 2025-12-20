@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import * as React from "react";
 import { createPortal } from "react-dom";
 import type { Project } from "@/content/projects";
@@ -47,9 +46,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
       <div className="flex items-start justify-between gap-4">
         <div className="space-y-2">
           <h3 className="text-lg font-semibold text-white">
-            <Link href={`/projects/${project.slug}`} className="hover:text-orange-200">
-              {project.title}
-            </Link>
+            <span className="hover:text-orange-200">{project.title}</span>
           </h3>
           <p className="text-sm text-slate-300">{project.summary}</p>
         </div>
@@ -67,9 +64,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
       </div>
 
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-200">
-        <Link href={`/projects/${project.slug}`} className="hover:text-orange-200">
-          {/* Case study */}
-        </Link>
+        {/* <span className="font-medium text-orange-200">Case study</span> */}
         {project.links.repo ? (
           <a
             className="inline-flex items-center gap-2 rounded-full border border-orange-300/70 px-3 py-1 text-xs font-semibold text-orange-100 transition hover:-translate-y-0.5 hover:border-orange-200 hover:bg-orange-500/10 hover:text-white"
@@ -99,7 +94,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
               tabIndex={-1}
             >
               <div
-                className="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-white/12 bg-neutral-950/95 p-6 shadow-[0_30px_90px_rgba(0,0,0,0.65)]"
+                className="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-[var(--border-strong)] bg-[var(--card-surface)] p-6 text-slate-100 shadow-[0_30px_90px_rgba(0,0,0,0.65)]"
                 onClick={stop}
                 onMouseDown={stop}
               >
@@ -129,12 +124,10 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
                   </div>
 
                   <div className="flex flex-wrap gap-3 text-sm text-slate-200">
-                    <Link href={`/projects/${project.slug}`} className="hover:text-violet-200">
-                      {/* Case study */}
-                    </Link>
+                    {/* <span className="font-medium text-orange-200">Case study</span> */}
                     {project.links.repo ? (
                       <a
-                        className="inline-flex items-center gap-2 rounded-full border border-violet-300/70 px-3 py-1 text-xs font-semibold text-violet-100 transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-violet-500/10 hover:text-white"
+                        className="inline-flex items-center gap-2 rounded-full border border-orange-300/70 px-3 py-1 text-xs font-semibold text-orange-100 transition hover:-translate-y-0.5 hover:border-orange-200 hover:bg-orange-500/10 hover:text-white"
                         href={project.links.repo}
                         target="_blank"
                         rel="noreferrer"
@@ -143,7 +136,7 @@ export function ProjectCard({ project, openSlug, setOpenSlug }: Props) {
                       </a>
                     ) : null}
                     {project.links.demo ? (
-                      <a className="hover:text-violet-200" href={project.links.demo} target="_blank" rel="noreferrer">
+                      <a className="hover:text-orange-200" href={project.links.demo} target="_blank" rel="noreferrer">
                         Demo
                       </a>
                     ) : null}

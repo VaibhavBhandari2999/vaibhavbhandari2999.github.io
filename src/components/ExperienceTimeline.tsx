@@ -26,14 +26,14 @@ export function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
                       {item.role} — {item.company}
                     </div>
                     {item.location ? (
-                      <div className="text-xs uppercase tracking-wide text-slate-400">
+                      <div className="text-xs uppercase tracking-wide text-orange-100/80">
                         {item.location}
                       </div>
                     ) : null}
                   </div>
-                  <div className="text-sm text-slate-300">{item.period}</div>
+                  <div className="text-sm text-slate-200/90 font-medium">{item.period}</div>
                 </div>
-                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-slate-200">
+                <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-slate-200/90">
                   {bullets.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}

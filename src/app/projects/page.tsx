@@ -18,7 +18,7 @@ export default function ProjectsPage() {
     <div>
       <h1 className="text-2xl font-bold tracking-tight">Projects</h1>
       <p className="mt-2 text-gray-600">
-        {/* Selected work. Each includes a case study page. */}
+        {/* Selected work*/}
       </p>
 
       <div className="mt-6 grid gap-5 md:grid-cols-2">
