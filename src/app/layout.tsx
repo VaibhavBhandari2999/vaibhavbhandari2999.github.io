@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 import GridTrail from "@/components/GridTrail";
 import { profile } from "@/content/profile";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -23,6 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative min-h-screen overflow-x-hidden bg-[var(--bg)] text-[var(--text)]">
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          strategy="afterInteractive"
+          defer
+          data-cf-beacon='{"token": "ce614a0cf969481ea22fc79639933c3a"}'
+        />
         <GridTrail
           className="pointer-events-none fixed inset-0 z-0"
           background="rgba(0,0,0,0)"
